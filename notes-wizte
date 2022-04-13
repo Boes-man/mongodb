@@ -1,0 +1,18 @@
+terraform apply -auto-approve
+
+#setup kubeconfig
+rm -f ~/.kube/config
+vi kubeconfig_aws-eks-test
+cp kubeconfig_aws-eks-test ~/.kube/config
+
+bash scripts/install-jenkins.sh
+
+Verify:
+Browse to Jenkins UI
+Check MongDB is up and auth works.
+`~/repos/mongodb-bin/mongodb-macos-x86_64-4.2.19/bin/mongo mongodb://13.210.66.206:27017`
+`~/repos/mongodb-bin/mongodb-macos-x86_64-4.2.19/bin/mongo mongodb://siteUserAdmin:passw0rd@13.210.66.206:27017`
+
+Clean up:
+helm uninstall my-release
+terraform destroy -auto-approve
