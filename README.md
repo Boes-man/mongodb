@@ -124,7 +124,7 @@ The Jenkins container needs to be updated to have the MongoDB connection string 
 
 ## Conclusion
 
-This solution allows one to recreate a working stack in a matter of minutes. Using Terraform and Ansible also makes it possible to create the stack on other cloud providers with minimal refactoring.# mongodb
+This solution allows one to recreate a working stack in a matter of minutes. Using Terraform and Ansible also makes it possible to create the stack on other cloud providers with minimal refactoring.
 
 ## To Do
 * MongoDB connection string from EKS web app.
