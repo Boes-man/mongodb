@@ -12,9 +12,6 @@ echo "Jenkins URL: http://$SERVICE_IP/"
 echo Username: user
 echo Password: $(kubectl get secret --namespace default my-release-jenkins -o jsonpath="{.data.jenkins-password}" | base64 --decode)
 
-sleep 20
-open http://$SERVICE_IP/
-
 #Configure Jenkins with elavated permissions and db connection string file
 kubectl apply -f scripts/cluster-role-binding.yaml
 kubectl create secret generic db-connection-string \
@@ -22,5 +19,6 @@ kubectl create secret generic db-connection-string \
 kubectl apply -f scripts/deploy-jenkins.yaml
 kubectl rollout status deploy/my-release-jenkins
 
-
+sleep 20
+open http://$SERVICE_IP/
 
