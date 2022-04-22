@@ -11,7 +11,7 @@ The objective of the exercise is to build a containerized web application runnin
 
 ## Automation
 
-Hashicorp Terraform and Ansible have been used to automate the provisioning of the stack. Terraform is used to provision the AWS EKS cluster, S3 bucket and an AWS EC2 instance, Ubuntu 18.04.6, with the required IAM instance profile. Ansible is used to install MongoDB 4.2.19 on the EC2 instance.
+Hashicorp Terraform and Ansible have been used to automate the provisioning of the stack. Terraform is used to provision the AWS EKS cluster, S3 bucket and an AWS EC2 instance, `Ubuntu 18.04.6`, with the required IAM instance profile. Ansible is used to install `MongoDB 4.2.19` on the EC2 instance.
 
 
 ### AWS VPC
