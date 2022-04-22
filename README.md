@@ -108,7 +108,7 @@ The Jenkins container needs to be updated to have the MongoDB connection string 
 
 
 * Jenkins: Use browser to access Jenkins UI and login with provided credentials
-* MongoDB: Use mongo shell to connect to MongoDB, e.g. `mongo mongodb://username:password@&lt;mongo_server_ip>:27017`
+* MongoDB: Use mongo shell to connect to MongoDB, e.g. `mongo mongodb://username:password@<mongo_server_ip>:27017`
 * Check Jenkins pod has MongoDB connection string file
 * Curl from Jenkins pod to MongoDB port 27017
 * Curl S3 bucket `curl -v http://s3.ap-southeast-2.amazonaws.com/mongo-tmp-bucket`
@@ -125,3 +125,8 @@ The Jenkins container needs to be updated to have the MongoDB connection string 
 ## Conclusion
 
 This solution allows one to recreate a working stack in a matter of minutes. Using Terraform and Ansible also makes it possible to create the stack on other cloud providers with minimal refactoring.# mongodb
+
+## To Do
+* MongoDB connection string from EKS web app.
+* S3 Access point for MongoDB backup.
+
