@@ -116,7 +116,7 @@ The Jenkins container needs to be updated to have the MongoDB connection string 
 
 
 
-* Once provisioned MongoDB configuration changes can be made by running the `ansible-playbook` command, e.g. `ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i '&lt;mongo_server_ip>,' --private-key id_rsa_np -e 'pub_key=id_rsa_np.pub' playbook.yaml`
+* Once provisioned MongoDB configuration changes can be made by running the `ansible-playbook` command, e.g. `ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i '<mongo_server_ip>,' --private-key id_rsa_np -e 'pub_key=id_rsa_np.pub' playbook.yaml`
 * Delete Jenkins, `helm uninstall my-release` and then run `terraform destroy` to clean up.
 
 
