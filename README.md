@@ -11,7 +11,7 @@ The objective of the exercise is to build a containerized web application runnin
 
 ## Automation
 
-Hashicorp Terraform and Ansible have been used to automate the provisioning of the stack. Terraform is used to provision the AWS EKS cluster, S3 bucket and an AWS EC2 instance with the required IAM instance profile. Ansible is used to install MongoDB 4.2 on the EC2 instance.
+Hashicorp Terraform and Ansible have been used to automate the provisioning of the stack. Terraform is used to provision the AWS EKS cluster, S3 bucket and an AWS EC2 instance, Ubuntu 18.04.6, with the required IAM instance profile. Ansible is used to install MongoDB 4.2.19 on the EC2 instance.
 
 
 ### AWS VPC
@@ -51,7 +51,7 @@ Hashicorp Terraform and Ansible have been used to automate the provisioning of t
 
 
 * The instance is created in the public vpc subnet.
-* Ubuntu 18.04, the specified ssh key pair is created and associated.
+* Ubuntu 18.04.6, the specified ssh key pair is created and associated.
 * A security group is created to allow TCP connections to ports 22 (SSH) and 27017 (MongoDB).
 * Terraform executes the Ansible playbook once the instance is available, leveraging the [Undergreen MongoDB Ansible Galaxy](https://galaxy.ansible.com/undergreen/mongodb) package.
     * Security Authorization is Enabled
@@ -74,7 +74,7 @@ Hashicorp Terraform and Ansible have been used to automate the provisioning of t
 
 ### Installation
 
-The Bitnami helm package is used to install Jenkins in the EKS cluster. The package exposes Jenkins UI as Kubernetes service type loadbalancer and generates a user for login.
+The Bitnami helm package is used to install Jenkins 2.332.2 in the EKS cluster. The package exposes Jenkins UI as Kubernetes service type loadbalancer and generates a user for login.
 
 
 ![alt_text](images/Jenkins.png "Jenkins")
