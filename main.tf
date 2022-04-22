@@ -162,6 +162,6 @@ output "ebs-vol-id" {
   value = aws_ebs_volume.mongo-data-vol.*.id
 }
 
-output "availability_zone" {
-  value = aws_ebs_volume.mongo-data-vol.*.availability_zone
-}
+# output "s3-bucket" {
+#   value = aws_s3_bucket.mongo-bkp.s3_bucket_bucket_domain_name
+# }
