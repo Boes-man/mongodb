@@ -1,4 +1,4 @@
-# Wiz Technical Exercise
+# Automating MongoDB in AWS
 
 
 ## Introduction
