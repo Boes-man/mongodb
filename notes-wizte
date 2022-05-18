@@ -13,7 +13,7 @@ Check MongDB is up and auth works.
 `~/repos/mongodb-bin/mongodb-macos-x86_64-4.2.19/bin/mongo mongodb://13.239.12.78:27017`
 `show users`
 `show dbs`
-`~/repos/mongodb-bin/mongodb-macos-x86_64-4.2.19/bin/mongo mongodb://siteUserAdmin:passw0rd@13.239.12.78:27017`
+`~/repos/mongodb-bin/mongodb-macos-x86_64-4.2.19/bin/mongo mongodb://user:pass@13.239.12.78:27017`
 
 Clean up:
 helm uninstall my-release
